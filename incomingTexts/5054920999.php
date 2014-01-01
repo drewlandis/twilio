@@ -1,6 +1,7 @@
 <?php
 
-require_once("app.inc");
+require_once("../appConstants.inc");
+require_once(BASE_FILE_PATH."twilio/twilioApp.inc");
 
 $sendingPhNumber = "505-492-0999";
 $errorPhNumber = "505-259-3798"; //Drew
