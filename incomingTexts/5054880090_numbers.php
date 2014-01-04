@@ -9,7 +9,8 @@ $sendingPhNumber = "505-488-0090";
 $From = $_REQUEST['From'];
 
 // the body of this text _should_ contain numbers
-$body = trim($_REQUEST['Body']);
+preg_match('/[0-9]+/',$_REQUEST['Body'],$matches);
+$body = $matches[0];
 
 // verify a text message body is present...
 if (!$body) {
@@ -35,7 +36,7 @@ switch($body) {
       break;
    default:
       $error = true;
-      $msg = "sorry, I can't recognize the numbers that you sent, please try again.";
+      $msg = "Sorry, I can't recognize the numbers that you sent, please try again.";
 }
 
 // respond to client via text message
