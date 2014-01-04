@@ -22,7 +22,7 @@ if (!$email) {
    mailError($msg);
 
    // format text message and respond to client
-   $msg = "sorry, we couldn't recognize the email address that you sent, please send it again.";
+   $msg = "Sorry, we couldn't recognize the email address that you sent, please send it again.";
    $sms = $client->account->sms_messages->create(
       $sendingPhNumber, // From this ph number
       $From, // recipient ph number
@@ -58,7 +58,7 @@ $message.= "\n";
 $message.= "information goes here...\n";
 $message.= "\n";
 $message.= "-the templeton team\n";
-$headers = "From: templetonabq@gmail.com";
+$headers = "From: Matt Templeton <templetonabq@gmail.com>";
 mail($to, $subject, $message, $headers);
 
 ?>
