@@ -20,6 +20,15 @@ if (!$email) {
           "_REQUEST['Body']: ".$_REQUEST['Body'];
    logMessage($msg);
    mailError($msg);
+
+   // format text message and respond to client
+   $msg = "sorry, we couldn't recognize the email address that you sent, please send it again.";
+   $sms = $client->account->sms_messages->create(
+      $sendingPhNumber, // From this ph number
+      $From, // recipient ph number
+      $msg
+   );
+
    exit;
 }
 
