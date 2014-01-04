@@ -1,12 +1,14 @@
 <?php
 
-require_once("appConstants.inc");
-require_once(BASE_FILE_PATH.'twilio/AppData.inc');
+require_once('AppData.inc');
 
 //$conId = addContactEmail('5051234567','test@gmail.com');
 //print $conId;
 
 $conDat = loadContact();
+
+//logMessage('test');
+
 print_r($conDat);
 
 

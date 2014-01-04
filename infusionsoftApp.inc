@@ -1,7 +1,7 @@
 <?php
 
 require_once("appConstants.inc");
-require_once(BASE_FILE_PATH."infusionsoft/PHP-iSDK/src/isdk.php");
+require_once(BASE_FILE_PATH."/infusionsoft/PHP-iSDK/src/isdk.php");
 
 $app = new iSDK;
 
@@ -12,6 +12,6 @@ $app->cfgCon("findSantaFeHomes");
 $app->enableLogging(1);
 
 // set log file location
-$app->setLog(BASE_FILE_PATH.'twilio/apilog.csv');
+$app->setLog(BASE_FILE_PATH.'/twilio/apilog.csv');
 
 ?>
