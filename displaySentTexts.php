@@ -1,6 +1,6 @@
 <?php
 
-require_once('path/to/twilio-php/Services/Twilio.php');
+require_once('twilioApp.inc');
 ?>
    <style>
       table, td, tr {
@@ -10,11 +10,6 @@ require_once('path/to/twilio-php/Services/Twilio.php');
       }
    </style>
 <?php
-
-// set your AccountSid and AuthToken from www.twilio.com/user/account
-$AccountSid = "AC0f578a5f52240e5aec741182dc67b08c";
-$AuthToken = "7ceda0ff6aafb3604ccff43bcaca716f";
-$client = new Services_Twilio($AccountSid, $AuthToken);
 
 $messages = $client->account->messages->getIterator(0, 50, array()); 
 //                                             page:0  pageSize:50  ?????
