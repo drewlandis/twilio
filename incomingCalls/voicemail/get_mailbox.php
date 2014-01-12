@@ -1,6 +1,6 @@
 <?php
 
-require "Services/Twilio.php";
+require_once('../../twilioApp.inc');
 require "messages.php";
 
 $error=false;

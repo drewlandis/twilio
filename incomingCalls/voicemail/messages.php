@@ -1,10 +1,6 @@
 <?php
 
-//DB Constants - Change to your settings
-$db_host='localhost';
-$db_name='company_directory';
-$db_user='db_username';
-$db_passwd='db_password';
+require_once('../../twilioApp.inc');
 
 //function for retrieving voicemail box by exten
 function getMailbox($voicemail_exten) {
